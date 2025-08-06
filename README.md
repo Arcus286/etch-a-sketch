@@ -1,1 +1,1 @@
-# etch-a-sketch
+This is a project that is creating using HTML, CSS and JavaScript. This is a project which marks an important milestone in my journey. 
