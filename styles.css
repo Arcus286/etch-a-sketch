@@ -1,0 +1,16 @@
+body{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#container{
+    border: 5px solid black;
+    padding: 5px;
+    height:480px;
+    width:480px;
+    gap:1px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+}
