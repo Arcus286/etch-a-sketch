@@ -4,13 +4,20 @@ body{
     flex-wrap: wrap;
 }
 
-#container{
-    border: 5px solid black;
-    padding: 5px;
-    height:480px;
-    width:480px;
-    gap:1px;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: start;
+#container {
+border: 5px solid black;
+padding: 5px; 
+width: 495px;
+height: auto;
+display: flex;
+flex-wrap: wrap;
+gap: 1px;
+align-content: start;
+}
+
+.box{
+    box-sizing: border-box;
+    height: 30px;
+    width: 30px;
+    border: 2px solid black;
 }
