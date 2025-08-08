@@ -9,6 +9,6 @@ let boxes = document.querySelectorAll(".box");
 
 boxes.forEach((box)=>{
     box.addEventListener("mouseover",(e)=>{
-        
+        e.target.style.backgroundColor = "grey";
     })
 })
