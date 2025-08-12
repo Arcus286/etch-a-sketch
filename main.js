@@ -12,3 +12,16 @@ boxes.forEach((box)=>{
         e.target.style.backgroundColor = "grey";
     })
 })
+
+let btn_resize = document.querySelector("#resize");
+let btn_reset = document.querySelector("#reset");
+let btn_rainbow = document.querySelector("#rainbow");
+let btn_menu = document.querySelector("#buttons");
+
+btn_menu.addEventListener("click",(btn)=>{
+    let target = btn.target;
+    switch(target.id){
+        case "resize":
+        
+    }
+})

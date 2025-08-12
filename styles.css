@@ -4,6 +4,7 @@ body{
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
+    background-color: #E0B0FF;
 }
 
 h1{
@@ -25,4 +26,20 @@ align-content: start;
     height: 37.5px;
     width: 37.5px;
     border: 1px solid black;
+    background-color: white;
+}
+
+ul{
+    list-style: none;
+    width: 600px;
+    display: flex;
+    justify-content: space-around;
+}
+
+button{
+    height: 60px;
+    width: 120px;
+    background-color: cyan;
+    font-family: "jua";
+    font-size: large;
 }
