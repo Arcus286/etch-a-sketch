@@ -21,7 +21,9 @@ let btn_menu = document.querySelector("#buttons");
 btn_menu.addEventListener("click",(btn)=>{
     let target = btn.target;
     switch(target.id){
-        case "resize":
-        
+        case "reset":
+            boxes.forEach((box)=>{
+                box.style.backgroundColor = "white";
+            })
     }
 })
