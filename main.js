@@ -39,5 +39,28 @@ btn_menu.addEventListener("click",(btn)=>{
                 })
             })
             break;
+        case "resize":
+            let num = parseInt(prompt("Enter the number of squares (max 100): "));
+            if(isNaN(num) || num<1 || num>100){
+                alert("Enter a valid number");
+            }
+            else{
+                container.innerHTML = "";
+                let boxSize = 600/num;
+                for(let i = 0;i<num*num;i++){
+                    let box = document.createElement("div");
+                    box.classList.add("box");
+                    box.style.width = boxSize + "px";
+                    box.style.height = boxSize + "px";
+                    box.style.boxSizing = "border-box";
+                    box.setAttribute("class","box");
+                    container.appendChild(box);
+                }
+                boxes.forEach((box)=>{
+                    box.addEventListener("mouseover",(e)=>{
+                        e.target.style.backgroundColor = "grey";
+                    })
+                })
+            }
     }
 })
