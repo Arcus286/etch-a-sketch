@@ -25,6 +25,7 @@ btn_menu.addEventListener("click",(btn)=>{
             boxes.forEach((box)=>{
                 box.style.backgroundColor = "white";
             })
+            break;
         case "rainbow":
             boxes.forEach((box)=>{
                 box.addEventListener("mouseover",(e)=>{
@@ -34,5 +35,6 @@ btn_menu.addEventListener("click",(btn)=>{
                     e.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
                 })
             })
+            break;
     }
 })
