@@ -1,4 +1,5 @@
 let container = document.querySelector("#container");
+let color = "grey";
 for(let i = 0;i<256;i++){
     let el = document.createElement("div");
     el.setAttribute("class","box");
@@ -22,6 +23,8 @@ btn_menu.addEventListener("click",(btn)=>{
     let target = btn.target;
     switch(target.id){
         case "reset":
+            color = "grey";
+            boxes = document.querySelectorAll(".box");
             boxes.forEach((box)=>{
                 box.style.backgroundColor = "white";
                 box.addEventListener("mouseover",(e)=>{
@@ -30,7 +33,7 @@ btn_menu.addEventListener("click",(btn)=>{
             })
             break;
         case "rainbow":
-            // let boxes = document.querySelectorAll(".box")
+            color = "rainbow";
             boxes.forEach((box)=>{
                 box.addEventListener("mouseover",(e)=>{
                     let r = Math.floor(Math.random() * 256);
@@ -58,11 +61,24 @@ btn_menu.addEventListener("click",(btn)=>{
                     container.appendChild(box);
                 }
                 let boxes = document.querySelectorAll(".box")
-                boxes.forEach((box)=>{
-                    box.addEventListener("mouseover",(e)=>{
-                        e.target.style.backgroundColor = "grey";
+                if(color == "grey"){
+                    boxes.forEach((box)=>{
+                        box.addEventListener("mouseover",(e)=>{
+                            e.target.style.backgroundColor = "grey";
+                        })
                     })
-                })
+                }
+                else if(color == "rainbow"){
+                    boxes.forEach((box)=>{
+                        box.addEventListener("mouseover",(e)=>{
+                            let r = Math.floor(Math.random() * 256);
+                            let g = Math.floor(Math.random() * 256);
+                            let b = Math.floor(Math.random() * 256);
+                            e.target.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+                        })
+                    })
+                }
             }
+            break;
     }
 })
