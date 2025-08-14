@@ -30,6 +30,7 @@ btn_menu.addEventListener("click",(btn)=>{
             })
             break;
         case "rainbow":
+            // let boxes = document.querySelectorAll(".box")
             boxes.forEach((box)=>{
                 box.addEventListener("mouseover",(e)=>{
                     let r = Math.floor(Math.random() * 256);
@@ -56,6 +57,7 @@ btn_menu.addEventListener("click",(btn)=>{
                     box.setAttribute("class","box");
                     container.appendChild(box);
                 }
+                let boxes = document.querySelectorAll(".box")
                 boxes.forEach((box)=>{
                     box.addEventListener("mouseover",(e)=>{
                         e.target.style.backgroundColor = "grey";
